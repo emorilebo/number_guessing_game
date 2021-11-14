@@ -14,6 +14,8 @@
 // Variable to store the list of guesses
 
 // Variable for store the correct random number
+let correctNumber = getRandomNumber();
+console.log(correctNumber);
 
 window.onload = function () {
   document.getElementById("number-submit").addEventListener("click", playGame);
@@ -26,8 +28,6 @@ window.onload = function () {
 function playGame() {
   // *CODE GOES BELOW HERE *
   let numberGuess = document.getElementById("number-guess").value;
-  console.log(numberGuess);
-  getRandomNumber();
 }
 
 /**
@@ -57,8 +57,8 @@ function resetResultContent() {
  */
 function getRandomNumber() {
   // *CODE GOES BELOW HERE *
-  let correctNumber = Math.floor(Math.random() * 100) + 1;
-  console.log(correctNumber);
+  let randomNumber = Math.floor(Math.random() * 100) + 1;
+  return randomNumber;
 }
 
 /**
