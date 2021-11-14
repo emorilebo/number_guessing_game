@@ -4,7 +4,7 @@
  * DONE: Generate a random number 1 to 100 and save it to variable correctNumber
  * DONE: Console whether the guess is too high, too low, or is correct inside playGame function
  * DONE: Create a function called displayResult to move the logic for if the guess is too high, too low, or correct
- * TODO: Complete the showYouWon, showNumberAbove, showNumberBelow
+ * DONE: Complete the showYouWon, showNumberAbove, showNumberBelow
  * TODO: Use the showYouWon... functions within displayResult to display the correct dialog
  * TODO: Save the guess history in a variable called guess
  * TODO: Display the guess history using displayHistory() function
@@ -38,11 +38,11 @@ function playGame() {
 // *CODE GOES BELOW HERE *
 function displayResult(numberGuess) {
   if (numberGuess > correctNumber) {
-    console.log("Your guess is too high");
+    showNumberAbove();
   } else if (numberGuess < correctNumber) {
-    console.log("Your guess is too low");
+    showNumberBelow();
   } else {
-    console.log("Your guess is correct");
+    showYouWon();
   }
 }
 
@@ -122,7 +122,7 @@ function showYouWon() {
    * HINT: Use the 'won' and text parameters
    */
   // *CODE GOES BELOW HERE *
-
+  let dialog = getDialog("won", text);
   document.getElementById("result").innerHTML = dialog;
 }
 
@@ -134,7 +134,7 @@ function showNumberAbove() {
    * HINT: Use the 'warning' and text parameters
    */
   // *CODE GOES BELOW HERE *
-
+  let dialog = getDialog("warning", text);
   document.getElementById("result").innerHTML = dialog;
 }
 
@@ -146,6 +146,6 @@ function showNumberBelow() {
    * HINT: Use the 'warning' and text parameters
    */
   // *CODE GOES BELOW HERE *
-
+  let dialog = getDialog("warning", text);
   document.getElementById("result").innerHTML = dialog;
 }
